@@ -1,0 +1,68 @@
+{
+  "name": "@wblxr408/career-map",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "Configuration bundle for an independently authorized runtime.",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wblxr408/agh-plugin-career-map"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "agh.market.json"
+  ],
+  "agnes": {
+    "provides": [
+      "bundle"
+    ],
+    "metadata": {
+      "displayName": "LLM Career Map",
+      "summary": "Configuration bundle for an independently authorized runtime.",
+      "description": "Search topic criteria and navigate six role routes with prerequisite topics and source links.",
+      "locales": {
+        "zh-CN": {
+          "displayName": "大模型学习与面试地图",
+          "summary": "配置 Bundle，配合单独配置和授权的运行组件使用。",
+          "description": "搜索学习主题与完成标准，按六条岗位路线导航并查看前置知识和来源。"
+        }
+      }
+    },
+    "bundles": {
+      "workflow": {
+        "profile": {
+          "mcp": [
+            "career-map"
+          ],
+          "toolPolicy": {
+            "readOnly": true
+          }
+        },
+        "presets": {
+          "career-map": {
+            "name": "career-map",
+            "extends": "standard"
+          }
+        },
+        "launch": {
+          "title": {
+            "en": "LLM Career Map",
+            "zh-CN": "大模型学习与面试地图"
+          },
+          "description": {
+            "en": "Search topic criteria and navigate six role routes with prerequisite topics and source links.",
+            "zh-CN": "搜索学习主题与完成标准，按六条岗位路线导航并查看前置知识和来源。"
+          },
+          "preset": "career-map",
+          "prompt": {
+            "mode": "draft",
+            "text": {
+              "en": "Search topic criteria and navigate six role routes with prerequisite topics and source links.",
+              "zh-CN": "搜索学习主题与完成标准，按六条岗位路线导航并查看前置知识和来源。"
+            }
+          }
+        }
+      }
+    }
+  }
+}
